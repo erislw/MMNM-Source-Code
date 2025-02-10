@@ -20,9 +20,6 @@ import lime.utils.Assets;
 import flixel.system.FlxSound;
 import openfl.utils.Assets as OpenFlAssets;
 import flixel.addons.display.FlxBackdrop;
-#if MODS_ALLOWED
-import sys.FileSystem;
-#end
 
 using StringTools;
 

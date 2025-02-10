@@ -12,10 +12,6 @@ import flixel.util.FlxTimer;
 import flixel.FlxSubState;
 import haxe.Json;
 import haxe.format.JsonParser;
-#if sys
-import sys.FileSystem;
-import sys.io.File;
-#end
 import openfl.utils.Assets;
 
 using StringTools;
