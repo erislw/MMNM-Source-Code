@@ -350,8 +350,16 @@ class TitleState extends MusicBeatState
 					bg.scrollFactor.set();
 					add(bg);
 		
-					(new FlxVideo(Paths.video('mx_chrims'))).finishCallback = function() {
-						FlxG.sound.playMusic(Paths.music('freakyMenu'), 0);
+					new FlxTimer().start(1.1, function(tmr:FlxTimer)
+                {    
+                    var video:VideoHandler = new VideoHandler();
+                    video.playVideo(Paths.video('mx_chrims'));
+                    video.finishCallback = function()
+                    {
+                        MusicBeatState.switchState(new MainMenuState());
+                    } 
+                    closedState = true;
+                });
 
 						FlxG.sound.music.fadeIn(4, 0, 0.7);
 
